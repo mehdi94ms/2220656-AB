@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="icon" href="logo.png">
+		
+		<script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+		/>
+		<link href="foundation.css" rel="stylesheet" />
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="containerIndex">
+        
+			<div class="glass" id="book1">
+				<a href="book1.html"> <img src="Book1/front.png" style="width: 100%"></img></a> <span class="center1">Hortus Eystettensis</span>
+			</div>
+			<div class="glass" id="book2">
+				<a href="book2.html"> <img src="Book2/book2 (1).png" style="width: 100%"></img></a> <span class="center2">Kraichgauer Turnierbuch</span>
+			</div>     
+		</div>
+
+		
+		<script>
+		
+		var numberOfPages = 420;
+		
+		var mysrc = 'Book1/book1 (';
+	   
+		for(var i=1; i <= numberOfPages; i++)
+        {	
+		var newDiv = document.createElement("div");
+		newDiv.id = i;
+		newDiv.classList.add('swiper-slide');
+		document.getElementById('myDiv').appendChild(newDiv);
+	
+        var newDiv1 = document.createElement("div");
+        newDiv1.id = i+500;
+        newDiv1.classList.add('image__wrapper');
+        document.getElementById(i).appendChild(newDiv1);
+        
+		var newImg = document.createElement('img');
+        newImg.src = mysrc + i + ').jpg';
+        document.getElementById(i+500).appendChild(newImg);
+        console.log(newDiv);
+        }
+		</script>
+					
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>
